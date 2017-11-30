@@ -34,3 +34,5 @@ C:\Users\carlos\source\repos\TorobotCSharp\FirstYoutube\obj\Debug\TorobotCSharp.
 C:\Users\carlos\source\repos\TorobotCSharp\FirstYoutube\obj\Debug\TorobotCSharp.csproj.CoreCompileInputs.cache
 C:\Users\carlos\source\repos\TorobotCSharp\FirstYoutube\obj\Debug\FirstYoutube.exe
 C:\Users\carlos\source\repos\TorobotCSharp\FirstYoutube\obj\Debug\FirstYoutube.pdb
+C:\Users\melzi\Desktop\TorobotCSharp\FirstYoutube\obj\Debug\FirstYoutube.exe
+C:\Users\melzi\Desktop\TorobotCSharp\FirstYoutube\obj\Debug\FirstYoutube.pdb
