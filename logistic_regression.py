@@ -1,16 +1,14 @@
-# This program uses Logistic Regression to predict if a tweet about earthquakes is verified or unverified
+# This program uses Logistic Regression to predict if a tweet about Los Angeles is positive, negative, or neutral
 
 import pandas as pd
 import numpy as np
-import pdb
-import seaborn as sbn
-import matplotlib.pyplot as plt
+#import pdb
 
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn import metrics
+#from sklearn import metrics
 
-DATA_SET_PATH = #"enter path here (include " ")"
+DATA_SET_PATH = 'C:/Users/Mae/Desktop/TorobotCSharp/data/mae_test_data.csv'
 
 def dataset_headers(dataset):
     # returns a list of header names
@@ -24,7 +22,7 @@ def train_logistic_regression(train_wL, train_nL):
 
 def model_accuracy(trained_model, feature, label):
     # get the accuracy of the training model
-    accuracy_score = trained.model.score(feature, target)
+    accuracy_score = trained_model.score(feature, label)
     return accuracy_score
 
 def main():
@@ -38,12 +36,11 @@ def main():
     headers = dataset_headers(dataset)
     print(f"Data set headers: {headers}")
 
-    feature = 'Keyword'
-    label = 'Label'
-
     # Split dataset into training and testing sets
     # wL = with label, nL = no label
-    train_wL, test_wL, train_nL, test_nL = train_test_split(dataset[feature], dataset[label], train_size=0.7)
+    X = np.array(dataset.drop(['Label'],1))
+    y = np.array(dataset['Label'])
+    train_wL, test_wL, train_nL, test_nL = train_test_split(X, y, train_size=0.7)
 
     print("train_wL size: ", train_wL.shape)
     print("test_wL size: ", test_wL.shape)
